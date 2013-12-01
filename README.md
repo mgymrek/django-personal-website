@@ -1,7 +1,9 @@
 django-personal-website
 =======================
 
-Template for making a personal website using django. Includes set up of a home page and publications page. Instructions given on how to create additional pages and how to serve it from Amazon.
+Template for making a personal website using django. Instructions given on how to create additional pages and how to serve it from Amazon.
+
+Special feature is an automatically updating publications page that pulls publications from pubmed using the Biopython library.
 
 Set up instructions
 =======================
@@ -98,8 +100,11 @@ In **django-personal-website/publications/utils.py**:
 In **django-personal-website/templates/resources.html**
 - Change "Your name"
 
-To add "resources":
-TODO
+
+Adding resources
+=======================
+You can add "resources", and can tie them to publications if you want. For example, if there is supplemental data you want to post that goes along with one of your publications. You can add these through the admin.
+
 
 Set up database and run locally
 =======================
