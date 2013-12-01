@@ -12,8 +12,11 @@ Log into your computer.
 
 If you are using Amazon:
 1. Launch an Amazon EC2 instance running Linux. Micro instances from the free tier are fine. If you don't have a key pair already, create one.
+
 2. Make sure your private key (.pem file) has permissions (chmod 400 my_key.pem)
+
 3. ssh into the instance: ssh -i my_key.pem ec2-user@<aws_ec2_instance_dns>
+
 4. Run "sudo yum update" to make sure all packages are up to date.
 
 Requirements
