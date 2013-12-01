@@ -27,7 +27,7 @@ ssh -i my_key.pem ec2-user@<aws_ec2_instance_dns>
 
 4. Run
 ```
-sudo yum update
+sudo yum -y update
 ```
 to make sure all packages are up to date.
 
@@ -37,7 +37,7 @@ Requirements
 1. Install MySQL
 ```
 # Install it
-sudo yum install mysql mysql-server
+sudo yum -y install mysql mysql-server
 # Start MySQL
 sudo /etc/init.d/mysqld start
 # Configure username and password
@@ -46,32 +46,32 @@ mysqladmin -u root password yourrootsqlpassword
 
 2. Install Apache and mod_python
 ```
-sudo yum install mod_python
+sudo yum -y install mod_python
 ```
 
 3. Install django and MySQL-python
 ```
-sudo yum install MySQL-python
-sudo yum install python-pip
+sudo yum -y install MySQL-python
+sudo yum -y install python-pip
 sudo pip install django
 ```
 
 4. Install Biopython (used to automatically update publications page)	
 ```
-sudo yum install python26-devel
-sudo yum install gcc
+sudo yum -y install python26-devel
+sudo yum -y install gcc
 sudo pip install biopython
 ```
 
 5. Install git (so you can clone this repository)
 ```
-sudo yum install git
+sudo yum -y install git
 ```
 
 6. Install other apache/httpd required packages
 ```
-sudo yum install httpd-devel
-sudo yum install mod_wsgi
+sudo yum -y install httpd-devel
+sudo yum -y install mod_wsgi
 ```
 
 Get template code
