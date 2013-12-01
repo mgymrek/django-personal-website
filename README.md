@@ -42,9 +42,9 @@ Database set up
 =======================
 Get template code
 
-'''
+```
 git clone https://github.com/mgymrek/django-personal-website.git
-'''
+```
 
 
 
