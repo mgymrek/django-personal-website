@@ -80,30 +80,29 @@ Update **django-personal-website/home/settings.py**
 - Under "ADMINS" (line 7) update your name and email address.
 - Under "DATABASES" update "NAME" (line 16) to be the name of your MySQL database, and "USER" and "PASSWORD" to be your MySQL username and password.
 
-In django-personal-website/templates/index.html:
+In **django-personal-website/templates/index.html**
 - Change "Your name"
 - Add a short description
-- Put a .jpg figure you would like on the homepage in django-personal-website/pictures/. Replace "smiley.jpg" with the filename.
+- Put a .jpg figure you would like on the homepage in ##django-personal-website/pictures/##. Replace "smiley.jpg" with the filename.
 
-In django-personal-website/templates/publications/index.html:
+In **django-personal-website/templates/publications/index.html**
 - Change "Your name"
 - Change "My Last name"
 
-In django-personal-website/templates/publications/article.html:
+In **django-personal-website/templates/publications/article.html**
 - Change "Your name"
 
-In django-personal-website/publications/utils.py:
+In **django-personal-website/publications/utils.py**:
 - Change "your name" to your name. This will search pubmed for publications with your name on them.
 
-In django-personal-website/templates/resources.html:
+In **django-personal-website/templates/resources.html**
 - Change "Your name"
 
 To add "resources":
 TODO
 
-Set up database
+Set up database and run locally
 =======================
-
 
 1. Create tables for each app
 '''
@@ -111,6 +110,12 @@ python manage.py sql publications
 python manage.py syncdb
 '''
 
-
+2. Set up all the static files (docs/pictures/css)
+```
 python manage.py collectstatic
+```
+
+3. Run the server (make sure you have port 80 set up to allow http access)
+```
 sudo python manage.py runserver 0.0.0.0:80
+```
