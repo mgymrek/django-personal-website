@@ -34,14 +34,16 @@ mysqladmin -u root password yourrootsqlpassword
 sudo yum install mod_python
 ```
 
-3. Install django
+3. Install django and MySQL-python
 ```
-sudo yum install Django MySQL-python
+sudo yum install MySQL-python
 ```
 
 4. Install git (so you can clone this repository)
 ```
 sudo yum install git
+sudo yum install python-pip
+sudo pip install django
 ```
 
 =======================
@@ -54,7 +56,5 @@ Get template code
 git clone https://github.com/mgymrek/django-personal-website.git
 ```
 
-
-
-
-
+=======================
+Edit pages
