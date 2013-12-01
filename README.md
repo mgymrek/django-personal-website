@@ -109,19 +109,24 @@ In **django-personal-website/templates/resources/index.html**
 Set up database and run locally
 =======================
 
-1. Create tables for each app
+1. Create the MySQL database
+```
+mysql -u root -e "create database <your-database-name"; 
+```
+
+2. Create tables for each app
 ```
 cd ~/django-personal-website/
 python manage.py sql publications
 python manage.py syncdb
 ```
 
-2. Set up all the static files (docs/pictures/css)
+3. Set up all the static files (docs/pictures/css)
 ```
 python manage.py collectstatic
 ```
 
-3. Run the server (make sure you have port 80 set up to allow http access)
+4. Run the server (make sure you have port 80 set up to allow http access)
 ```
 sudo python manage.py runserver 0.0.0.0:80
 ```
