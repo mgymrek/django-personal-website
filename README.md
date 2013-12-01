@@ -76,7 +76,7 @@ git clone https://github.com/mgymrek/django-personal-website.git
 Edit pages
 =======================
 
-Update django-personal-website/home/settings.py
+Update **django-personal-website/home/settings.py**
 - Under "ADMINS" (line 7) update your name and email address.
 - Under "DATABASES" update "NAME" (line 16) to be the name of your MySQL database, and "USER" and "PASSWORD" to be your MySQL username and password.
 
@@ -99,7 +99,7 @@ In django-personal-website/templates/resources.html:
 - Change "Your name"
 
 To add "resources":
-# TODO
+TODO
 
 Set up database
 =======================
