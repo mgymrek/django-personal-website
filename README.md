@@ -111,6 +111,7 @@ Set up database and run locally
 
 1. Create tables for each app
 ```
+cd ~/django-personal-website/
 python manage.py sql publications
 python manage.py syncdb
 ```
