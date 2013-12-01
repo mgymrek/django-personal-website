@@ -1,0 +1,54 @@
+<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}/mgymrekweb.css" media="screen" />
+<div id="container">
+	<div id="header">
+		<h1>
+			Your name
+		</h1>
+	</div>
+	<div id="navigation">
+		<ul>
+			<li><a href="/">Home</a></li>	
+			<li><a href="/publications">Publications</a></li>
+			<li><a href="/resources">Resources</a></li>
+			<li><a href="/strs">Short tandem repeats</a></li>
+		</ul>
+	</div>
+	<div id="content">
+		<h2>
+			{{ pub.title }} <em>{{ pub.journal }}</em> ({{ pub.pubdate.year }})
+		</h2>
+		<p>
+		{% for author in pub.author.all %}
+		    {% ifequal author.last_name "Gymrek" %}<b>{% endifequal %}
+		      {{ author.first_name }} {{ author.last_name }}{% if forloop.last %}.{% else %},{% endif %}
+		    {% ifequal author.last_name "Gymrek" %}</b>{% endifequal %}
+		    {% endfor %}
+		[<a href="http://www.ncbi.nlm.nih.gov/pubmed/{{ pub.pmid }}" target="_blank">pubmed</a>]
+		[<a href="http://www.bioinformatics.org/texmed/cgi-bin/list.cgi?PMID={{ pub.pmid }}" target="_blank">bibtex</a>]
+		</p>
+		{% if preleases %}
+		<h3>
+		  Related articles and press releases
+		  </h3>
+		{% for pr in preleases %}
+		<p>
+		{{ pr.title }}. <em>{{ pr.journal }}</em> {{ pr.prdate.date }}
+		[<a target="_blank" href="{{ pr.link }}">view article</a>]
+		</p>
+		{% endfor %}
+		{% endif %}
+
+		{% if resources %}
+		<h3>
+		  Resources
+		  </h3>
+		{% for r in resources %}
+		<b><a target="_blank" href="{{ r.datalink }}">{{ r.name }}</a></b>: {{ r.description }}
+		{% endfor %}
+		{% endif %}
+		  
+	</div>
+	<div id="footer">
+		Copyright © Melissa Gymrek, 2013
+	</div>
+</div>

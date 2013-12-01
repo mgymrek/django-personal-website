@@ -1,0 +1,42 @@
+<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}/mgymrekweb.css" media="screen" />
+<div id="container">
+	<div id="header">
+		<h1>
+		  Your name
+		</h1>
+	</div>
+	<div id="navigation">
+		<ul>
+			<li><a href="/">Home</a></li>	
+			<li><a href="">Publications</a></li>
+			<li><a href="/resources">Resources</a></li>
+		</ul>
+	</div>
+	<div id="content">
+		<h2>
+			Publications
+		</h2>
+		
+		  {% for pub in updated_pub_list %}
+		  <p>
+		    {{ forloop.counter }}. 
+		    {% for author in pub.author.all %}
+		    {% ifequal author.last_name "Gymrek" %}<b>{% endifequal %}
+		      {{ author.first_name }} {{ author.last_name }}{% if forloop.last %}.{% else %},{% endif %}
+		    {% ifequal author.last_name "Gymrek" %}</b>{% endifequal %}
+		    {% endfor %}
+		    ({{ pub.pubdate.year }})
+		    {{ pub.title }}
+		    <em>{{ pub.journal }}</em>.
+		    {{ pub.volume }}({{ pub.ip }}):{{ pub.pages }}
+		    [<a href="http://www.ncbi.nlm.nih.gov/pubmed/{{ pub.pmid }}" target="_blank">pubmed</a>]
+		    [<a href="http://www.bioinformatics.org/texmed/cgi-bin/list.cgi?PMID={{ pub.pmid }}" target="_blank">bibtex</a>]
+		    [<a href="article/{{ pub.id }}">view article</a>]
+		  </p>
+		  {% endfor %}
+		  
+	</div>
+	<div id="footer">
+		Copyright © Melissa Gymrek, 2013
+	</div>
+</div>

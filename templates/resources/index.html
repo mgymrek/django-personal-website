@@ -1,0 +1,34 @@
+<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}/mgymrekweb.css" media="screen" />
+<div id="container">
+	<div id="header">
+		<h1>
+		  Your name
+		</h1>
+	</div>
+	<div id="navigation">
+		<ul>
+			<li><a href="/">Home</a></li>	
+			<li><a href="/publications">Publications</a></li>
+			<li><a href="">Resources</a></li>
+		</ul>
+	</div>
+	<div id="content">
+		<h2>
+			Resources
+		</h2>
+		{% for res in resources %}
+		<p>
+		  <h3><a target="_blank" href="{{ res.datalink }}">{{ res.name }}</a>
+		    ({{ res.date.year }})
+		  </h3>
+		  {% if res.publication %}
+		  </p><b>Publication</b>: <a href="/publications/article/{{ res.publication.id }}">{{ res.publication.title }}</a></p>
+		  {% endif %}		  
+		  {{ res.description }}
+		</p>
+		{% endfor %}
+	</div>
+	<div id="footer">
+		Copyright © Melissa Gymrek, 2013
+	</div>
+</div>

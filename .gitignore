@@ -1,0 +1,6 @@
+*.tex
+*.pyc
+*~
+*.log
+*.aux
+*.out
