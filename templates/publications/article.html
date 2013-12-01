@@ -19,9 +19,9 @@
 		</h2>
 		<p>
 		{% for author in pub.author.all %}
-		    {% ifequal author.last_name "Gymrek" %}<b>{% endifequal %}
+		    {% ifequal author.last_name "Your last name" %}<b>{% endifequal %}
 		      {{ author.first_name }} {{ author.last_name }}{% if forloop.last %}.{% else %},{% endif %}
-		    {% ifequal author.last_name "Gymrek" %}</b>{% endifequal %}
+		    {% ifequal author.last_name "Your last name" %}</b>{% endifequal %}
 		    {% endfor %}
 		[<a href="http://www.ncbi.nlm.nih.gov/pubmed/{{ pub.pmid }}" target="_blank">pubmed</a>]
 		[<a href="http://www.bioinformatics.org/texmed/cgi-bin/list.cgi?PMID={{ pub.pmid }}" target="_blank">bibtex</a>]
