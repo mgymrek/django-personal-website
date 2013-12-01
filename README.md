@@ -77,8 +77,8 @@ Edit pages
 =======================
 
 1. Update django-personal-website/home/settings.py
-..*Under "ADMINS" (line 7) update your name and email address.
-..*Under "DATABASES" update "NAME" (line 16) to be the name of your MySQL database, and "USER" and "PASSWORD" to be your MySQL username and password.
+..Under "ADMINS" (line 7) update your name and email address.
+..Under "DATABASES" update "NAME" (line 16) to be the name of your MySQL database, and "USER" and "PASSWORD" to be your MySQL username and password.
 
 2. Edit the homepage
 
