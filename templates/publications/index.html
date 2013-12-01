@@ -21,9 +21,9 @@
 		  <p>
 		    {{ forloop.counter }}. 
 		    {% for author in pub.author.all %}
-		    {% ifequal author.last_name "Gymrek" %}<b>{% endifequal %}
+		    {% ifequal author.last_name "My Last Name" %}<b>{% endifequal %}
 		      {{ author.first_name }} {{ author.last_name }}{% if forloop.last %}.{% else %},{% endif %}
-		    {% ifequal author.last_name "Gymrek" %}</b>{% endifequal %}
+		    {% ifequal author.last_name "My Last Name" %}</b>{% endifequal %}
 		    {% endfor %}
 		    ({{ pub.pubdate.year }})
 		    {{ pub.title }}
