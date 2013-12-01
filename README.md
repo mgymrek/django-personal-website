@@ -68,6 +68,12 @@ sudo pip install biopython
 sudo yum install git
 ```
 
+6. Install other apache/httpd required packages
+```
+sudo yum install httpd-devel
+sudo yum install mod_wsgi
+```
+
 Get template code
 =======================
 
@@ -100,12 +106,6 @@ In **django-personal-website/publications/utils.py**:
 In **django-personal-website/templates/resources.html**
 - Change "Your name"
 
-
-Adding resources
-=======================
-You can add "resources", and can tie them to publications if you want. For example, if there is supplemental data you want to post that goes along with one of your publications. You can add these through the admin.
-
-
 Set up database and run locally
 =======================
 
@@ -124,3 +124,53 @@ python manage.py collectstatic
 ```
 sudo python manage.py runserver 0.0.0.0:80
 ```
+
+Adding resources
+=======================
+You can add "resources", and can tie them to publications if you want. For example, if there is supplemental data you want to post that goes along with one of your publications. You can add these through the admin.
+
+First make sure you have a superuser set up:
+```
+python manage.py createsuperuser --username=joe --email=joe@example.com
+```
+
+Now, go to the django admin page at <ec2-dns:80>/admin. Sign in with the superuser name and password. Here you can manage everything in the database that django draws information from. For instance if you already ran the above steps you should see your publications listed. To add a resource, go to "Add resource".
+
+
+Adding additional pages
+=======================
+Information about adding additional pages can be found at https://docs.djangoproject.com.
+
+
+Additional configuration
+=======================
+To change the style, edit the CSS file at django-personal-website/css/djangoweb.css. After you change this, be sure to run "collectstatic" again so you can see the changes.
+
+
+Serving the site
+=======================
+1. Edit *django-personal-website/httpd.conf*. Put the DNS of your EC2 instance at line 1015.
+
+2. Copy the original httpd.conf file somwhere in case you screw something up
+```
+sudo cp /etc/httpd/conf/httpd.conf old_httpd.conf
+```
+
+3. Copy your httpd.conf to where Apache knows to look for it
+```
+sudo cp ~/django-personal-website/httpd.conf /etc/httpd/conf/
+```
+
+4. Create a logs directory for apache
+```
+mkdir /home/ec2-user/django-personal-website/logs
+```
+
+5. Edit *django-personal-website/apache/django.wsgi*. Change the paths to your django root directory if it is not at /home/ec2-user/django-personal-website.
+
+6. Start httpd
+```
+sudo /etc/init.d/httpd restart
+```
+
+6. Tie your Amazon EC2 instance's DNS to your domain name, for instance at name.com.
