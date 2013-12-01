@@ -103,7 +103,7 @@ In **django-personal-website/templates/publications/article.html**
 In **django-personal-website/publications/utils.py**:
 - Change "your name" to your name. This will search pubmed for publications with your name on them.
 
-In **django-personal-website/templates/resources.html**
+In **django-personal-website/templates/resources/index.html**
 - Change "Your name"
 
 Set up database and run locally
