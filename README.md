@@ -65,14 +65,16 @@ sudo pip install biopython
 ```
 sudo yum install git
 ```
-=======================
+
 Get template code
+=======================
 
 ```
 git clone https://github.com/mgymrek/django-personal-website.git
 ```
-=======================
+
 Edit pages
+=======================
 
 1. Update django-personal-website/home/settings.py
 Under "ADMINS" (line 7) update your name and email address.
