@@ -110,10 +110,10 @@ Set up database and run locally
 =======================
 
 1. Create tables for each app
-'''
+```
 python manage.py sql publications
 python manage.py syncdb
-'''
+```
 
 2. Set up all the static files (docs/pictures/css)
 ```
