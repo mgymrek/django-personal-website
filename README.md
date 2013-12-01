@@ -41,7 +41,7 @@ sudo yum install python-pip
 sudo pip install django
 ```
 
-4. Install Biopython (used to automatically update publications page)
+4. Install Biopython (used to automatically update publications page)	
 ```
 sudo yum install python26-devel
 sudo yum install gcc
@@ -76,4 +76,5 @@ python manage.py syncdb
 '''
 
 
+python manage.py collectstatic
 sudo python manage.py runserver 0.0.0.0:80
