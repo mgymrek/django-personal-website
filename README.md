@@ -37,24 +37,43 @@ sudo yum install mod_python
 3. Install django and MySQL-python
 ```
 sudo yum install MySQL-python
-```
-
-4. Install git (so you can clone this repository)
-```
-sudo yum install git
 sudo yum install python-pip
 sudo pip install django
 ```
 
-=======================
-Database set up
+4. Install Biopython (used to automatically update publications page)
+```
+sudo yum install python26-devel
+sudo yum install gcc
+sudo pip install biopython
+```
 
+5. Install git (so you can clone this repository)
+```
+sudo yum install git
+```
 =======================
 Get template code
 
 ```
 git clone https://github.com/mgymrek/django-personal-website.git
 ```
-
 =======================
 Edit pages
+
+1. Update django-personal-website/home/settings.py
+Under "ADMINS" (line 7) update your name and email address.
+Under "DATABASES" update "NAME" (line 16) to be the name of your MySQL database, and "USER" and "PASSWORD" to be your MySQL username and password.
+
+
+=======================
+Set up database
+
+1. Create tables for each app
+'''
+python manage.py sql publications
+python manage.py syncdb
+'''
+
+
+sudo python manage.py runserver 0.0.0.0:80
