@@ -150,7 +150,7 @@ First make sure you have a superuser set up:
 python manage.py createsuperuser --username=<joe> --email=<joe@example.com>
 ```
 
-Now, go to the django admin page at <ec2-dns:80>/admin. Sign in with the superuser name and password. Here you can manage everything in the database that django draws information from. For instance if you already ran the above steps you should see your publications listed. To add a resource, go to "Add resource".
+Now, go to the django admin page in your web browser \<your-amazon-ec2-dns\>/admin. Sign in with the superuser name and password. Here you can manage everything in the database that django draws information from. For instance if you already ran the above steps you should see your publications listed. To add a resource, go to "Add resource".
 
 
 Adding additional pages
