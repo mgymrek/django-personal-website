@@ -5,6 +5,8 @@ Template for making a personal website using django. Instructions given on how t
 
 Special feature is an automatically updating publications page that pulls publications from pubmed using the Biopython library. For an example of this page, see: http://www.melissagymrek.com/publications/
 
+Note in the instructions below, any time you should edit part of a command with information specific to your site/computer, it is enclosed by carrots ("<stuff specific to you>")
+
 Set up instructions
 =======================
 (These instructions assume you are on a fresh machine (e.g. booting up a new Amazon EC2 instance) from which you will serve your site.)
@@ -17,12 +19,12 @@ If you are using Amazon:
 
 2. Make sure your private key (.pem file) has permissions
 ```
-chmod 400 my_key.pem
+chmod 400 <my_key.pem>
 ```
 
 3. ssh into the instance
 ```
-ssh -i my_key.pem ec2-user@<aws_ec2_instance_dns>
+ssh -i <my_key.pem> ec2-user@<aws_ec2_instance_dns>
 ```
 
 4. Run
