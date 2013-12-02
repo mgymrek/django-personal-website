@@ -96,7 +96,10 @@ Update **django-personal-website/home/settings.py**
 In **django-personal-website/templates/index.html**
 - Change "Your name"
 - Add a short description
-- Put a .jpg figure you would like on the homepage in ##django-personal-website/pictures/##. Replace "smiley.jpg" with the filename.
+- Put a .jpg figure you would like on the homepage in **django-personal-website/pictures/** (You can upload pictures and other files from your local computer to your instance using scp). Replace "smiley.jpg" in index.html with the filename. An example scp command:
+```
+scp -i <my_key.pem> <path-to-my-beautiful-picture.jpg> ec2-user@<aws_ec2_instance_dns>
+```
 
 In **django-personal-website/templates/publications/index.html**
 - Change "Your name"
@@ -116,7 +119,7 @@ Set up database and run locally
 
 1. Create the MySQL database
 ```
-mysql -u root -e "create database <your-database-name"; 
+mysql -u root -e "create database <your-database-name>"; 
 ```
 
 2. Create tables for each app
