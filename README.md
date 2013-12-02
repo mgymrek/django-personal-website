@@ -131,6 +131,8 @@ python manage.py collectstatic
 sudo python manage.py runserver 0.0.0.0:80
 ```
 
+Paste your EC2 DNS to your web browser, and you should see your new site!
+
 Adding resources
 =======================
 You can add "resources", and can tie them to publications if you want. For example, if there is supplemental data you want to post that goes along with one of your publications. You can add these through the admin.
