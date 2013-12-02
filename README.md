@@ -129,7 +129,7 @@ python manage.py sql publications
 python manage.py syncdb
 ```
 
-3. Set up all the static files (docs/pictures/css)
+3. Set up all the static files (docs/pictures/css). You need to do this any time you update any pictures, css, or documents.
 ```
 python manage.py collectstatic
 ```
