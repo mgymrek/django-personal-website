@@ -3,7 +3,7 @@ django-personal-website
 
 Template for making a personal website using django. Instructions given on how to create additional pages and how to serve it from Amazon.
 
-Special feature is an automatically updating publications page that pulls publications from pubmed using the Biopython library.
+Special feature is an automatically updating publications page that pulls publications from pubmed using the Biopython library. For an example of this page, see: http://www.melissagymrek.com/publications/
 
 Set up instructions
 =======================
