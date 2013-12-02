@@ -14,7 +14,7 @@ Set up instructions
 =======================
 (These instructions assume you are on a fresh machine (e.g. booting up a new Amazon EC2 instance) from which you will serve your site.)
 
-Log into your computer.
+Log into the computer where you'll host your site
 =======================
 
 If you are using Amazon:
