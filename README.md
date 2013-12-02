@@ -5,7 +5,10 @@ Template for making a personal website using django. Instructions given on how t
 
 Special feature is an automatically updating publications page that pulls publications from pubmed using the Biopython library. For an example of this page, see: http://www.melissagymrek.com/publications/
 
-Note in the instructions below, any time you should edit part of a command with information specific to your site/computer, it is enclosed by carrots ("<stuff specific to you>")
+Note in the instructions below, any time you should edit part of a command with information specific to your site/computer, it is enclosed by carrots:
+```
+<stuff specific to you>
+```
 
 Set up instructions
 =======================
@@ -43,7 +46,7 @@ sudo yum -y install mysql mysql-server
 # Start MySQL
 sudo /etc/init.d/mysqld start
 # Configure username and password
-mysqladmin -u root password yourrootsqlpassword
+mysqladmin -u root password <yourrootsqlpassword>
 ```
 
 2. Install Apache and mod_python
@@ -141,7 +144,7 @@ You can add "resources", and can tie them to publications if you want. For examp
 
 First make sure you have a superuser set up:
 ```
-python manage.py createsuperuser --username=joe --email=joe@example.com
+python manage.py createsuperuser --username=<joe> --email=<joe@example.com>
 ```
 
 Now, go to the django admin page at <ec2-dns:80>/admin. Sign in with the superuser name and password. Here you can manage everything in the database that django draws information from. For instance if you already ran the above steps you should see your publications listed. To add a resource, go to "Add resource".
